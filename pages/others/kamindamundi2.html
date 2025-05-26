@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hopi Hari</title>
+  <link rel="stylesheet" href="CSS/kamindamundi2.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmS2AvAdYbc4_gVDyvjHs5DG6FaT0s9q-thQ&s" alt="Logo Hopi Hari">
+                </div>
+                <div class="user-menu">
+                    <div class="user-info">
+                        <div class="user-name" id="user-name">Bem-vindo(a)</div>
+                        <div class="user-email" id="user-email"></div>
+                    </div>
+                     <form action="../dashboard/dashboard.html">
+                        <button class="logout-btn" >Voltar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    <main class="main-content">
+       
+        
+        <h2 class="section-title">Kaminda Mundi </h2>
+        <div class="dashboard-cards">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQefQU17hRQp4wQolRNZCvRQI1J7vn2-WbZcQ&s">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">THEATRO DI KAMINDA</h3>
+                    <div class="ride-info">
+                     
+                        <span class="ride-status status-busy">Muito Movimentadoxxx</span>
+                    </div>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+            
+    
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Yn5wp9G15OWaBRgZsBjy8tlmPx_YmClGCg&s" alt="Montezum">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">JOGAKÍ DI KAMINDA</h3>
+                  
+                    <div class="ride-info">
+                      
+                        <div class="ride-time">35 min</div>
+                        <span class="ride-status status-maintenance">Manutenção</span>
+                    </div>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyYqH1sjj0hEtbVeVtkuHbrR6LWiid-48ryA&s" alt="Looping Star">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">LE VOYAGE</h3>
+                    
+                    <div class="ride-info">
+                     
+                        <div class="ride-time">25 min</div>
+                        <span class="ride-status status-open">Normal</span>
+                    </div>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Giranda_Mundi_do_parque_Hopi_Hari.jpg" alt="Montanha-Russa La Tour Eiffel">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">GIRANDA MUNDI</h3>
+                   
+                    <div class="ride-info">
+                      
+                        <div class="ride-time">35 min</div>
+                        <span class="ride-status status-busy">Muito Movimentadoxxx</span>
+                    </div>
+                    <a href="#" class="card-button">Saiba Mais</a>
+                </div>
+            </div>
+            
+           
+        
+    </main>
+
+    <script>
+        // Verificar se há um usuário logado
+        document.addEventListener('DOMContentLoaded', function() {
+            const userData = JSON.parse(localStorage.getItem('user')) || {};
+            
+            if (userData.firstName) {
+                document.getElementById('user-name').textContent = `Olá, ${userData.firstName}!`;
+                document.getElementById('user-email').textContent = userData.email;
+            } else {
+                // Redirecionar para a página de login se não houver usuário
+                window.location.href = '/';
+            }
+            
+            // Botão de logout
+            document.getElementById('logout-btn').addEventListener('click', function() {
+                localStorage.removeItem('user');
+                window.location.href = '/';
+            });
+            
+            // Toggle do menu lateral (para mobile)
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.toggle('active');
+            });
+            
+            // Fechar menu ao clicar em um item (para mobile)
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 992) {
+                        document.getElementById('sidebar').classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
