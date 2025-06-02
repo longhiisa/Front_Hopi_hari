@@ -380,3 +380,29 @@
                 display: block;
             }
         }
+
+        /* Estilo para a área da foto de perfil */
+.foto-label {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin: 20px auto; /* centraliza e espaça em cima e embaixo */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FF6B00; /* borda laranja */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .foto-label:hover {
+    box-shadow: 0 0 8px 3px rgba(255, 107, 0, 0.6);
+  }
+  
+  /* A imagem dentro da foto de perfil */
+  .foto-label img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cobre todo o círculo sem distorcer */
+    display: block;
+  }
+  

@@ -1,0 +1,106 @@
+/* Fonte elegante e base limpa */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f2f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 700px;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 32px;
+    color: #5b2e91;
+    margin-bottom: 20px;
+  }
+  
+  /* Foto de perfil */
+  .foto-label {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .foto-label img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #d5c3f0;
+    transition: transform 0.3s;
+  }
+  
+  .foto-label:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Formulário */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="tel"] {
+    width: 80%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: #7c4bd6;
+    outline: none;
+  }
+  
+  /* Botão */
+  button {
+    background-color: #7c4bd6;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #5b2e91;
+  }
+  
+  /* Mensagem de sucesso */
+  #mensagem {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"] {
+      width: 100%;
+    }
+  }
+  

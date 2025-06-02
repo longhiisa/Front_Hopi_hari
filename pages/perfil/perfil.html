@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perfil do Usuário</h1>
+
+        <!-- Foto do perfil -->
+        <label for="foto_perfil" class="foto-label" title="Clique para alterar foto">
+            <img id="fotoPerfil" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto do usuário" />
+        </label>
+        <input type="file" id="foto_perfil" accept="image/*" style="display:none" />
+
+        <form id="perfil-form">
+            <input type="text" id="first_name" placeholder="Nome" required>
+            <input type="text" id="last_name" placeholder="Sobrenome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="date" id="birth_date" required>
+            <input type="tel" id="phone" placeholder="Telefone" required>
+            <button type="submit">Salvar</button>
+        </form>
+        <p id="mensagem"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Mostrar preview da foto selecionada
+      const inputFoto = document.getElementById('foto_perfil');
+      const imgFoto = document.getElementById('fotoPerfil');
+      const labelFoto = document.querySelector('.foto-label');
+
+      labelFoto.addEventListener('click', () => {
+        inputFoto.click();
+      });
+
+      inputFoto.addEventListener('change', () => {
+        const arquivo = inputFoto.files[0];
+        if (arquivo) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            imgFoto.src = e.target.result;
+          }
+          reader.readAsDataURL(arquivo);
+        }
+      });
+    </script>
+</body>
+</html>
