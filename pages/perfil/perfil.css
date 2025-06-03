@@ -1,106 +1,121 @@
-/* Fonte elegante e base limpa */
+/* Fonte divertida e layout centralizado */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f2f9;
+    font-family: 'Baloo 2', cursive;
+    background-image: url('https://www.themeparkbrochures.net/wp-content/uploads/2023/12/Hop-Hari-2021.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-  }
-  
-  .container {
-    background-color: #fff;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container com estilo de parque */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border: 6px dashed #ffa500; /* Borda divertida */
+    border-radius: 25px;
     width: 80%;
     max-width: 700px;
     padding: 30px;
-    margin-top: 50px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  /* Título */
-  h1 {
-    font-size: 32px;
-    color: #5b2e91;
-    margin-bottom: 20px;
-  }
-  
-  /* Foto de perfil */
-  .foto-label {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Título com cor vibrante */
+h1 {
+    font-size: 36px;
+    color: #7c4bd6;
+    margin-bottom: 25px;
+}
+
+/* Foto de perfil com moldura temática */
+.foto-label {
     cursor: pointer;
     display: inline-block;
     margin-bottom: 20px;
-  }
-  
-  .foto-label img {
-    width: 120px;
-    height: 120px;
+}
+
+.foto-label img {
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #d5c3f0;
+    border: 5px solid #ffb400; /* Moldura laranja viva */
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
     transition: transform 0.3s;
-  }
-  
-  .foto-label:hover img {
-    transform: scale(1.05);
-  }
-  
-  /* Formulário */
-  form {
+}
+
+.foto-label:hover img {
+    transform: scale(1.07);
+}
+
+/* Campos com estilo mais vibrante */
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="date"],
-  input[type="tel"] {
-    width: 80%;
-    padding: 12px 15px;
-    margin: 8px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+    width: 90%;
+    padding: 15px 18px;
+    margin: 10px 0;
     border: 2px solid #ccc;
-    border-radius: 10px;
-    transition: border-color 0.3s;
-  }
-  
-  input:focus {
-    border-color: #7c4bd6;
-    outline: none;
-  }
-  
-  /* Botão */
-  button {
-    background-color: #7c4bd6;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 16px;
-    margin-top: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #5b2e91;
-  }
-  
-  /* Mensagem de sucesso */
-  #mensagem {
-    margin-top: 15px;
-    color: green;
+    transition: 0.3s;
+    background-color: #fefefe;
+}
+
+input:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 8px #ff6600;
+    outline: none;
+}
+
+/* Botão alegre e animado */
+button {
+    background: linear-gradient(135deg, #ff6600, #ffcc00);
+    color: white;
     font-weight: bold;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 600px) {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mensagem de sucesso */
+#mensagem {
+    margin-top: 15px;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
     input[type="text"],
     input[type="email"],
     input[type="date"],
     input[type="tel"] {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}
