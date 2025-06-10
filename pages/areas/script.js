@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.log(brinquedo);
 
         grid.innerHTML += `<div class="ride-card">
-            <div class="ride-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUhZ_Pjz20DN5fzXsUEaAufsOt0DP_r_raqw&s')"></div>
+            <div class="ride-image" style="background-image: url('../../img/${brinquedo.image}');"></div>
             <div class="ride-info">
                 <h3 class="ride-name">${brinquedo.name}</h3>
                 <div class="ride-time">${brinquedo.waiting_time}</div>
